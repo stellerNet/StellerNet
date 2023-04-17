@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StellerNet</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <script src="https://kit.fontawesome.com/acf691914f.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="../assets/SN.png">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>
+                <a href="../index.html" class="logo">
+                    <img src="../assets/SN.png" alt="">
+                    <span class="nav-item">StellerNet</span>
+                </a>
+            </li>
+            <li><a href="../index.html">
+                <i class="fas fa-home"></i>
+                <span class="nav-item">Home</span>
+            </a></li>
+            <li><a href="./proxy.html">
+                <i class="fas fa-server"></i>
+                <span class="nav-item">Proxy</span>
+            </a></li>
+            <li><a href="./games.html">
+                <i class="fas fa-solid fa-gamepad"></i>
+                <span class="nav-item">Games</span>
+            </a></li>
+            <li><a href="./apps.html">
+                <i class="fas fa-solid fa-bag-shopping"></i>
+                <span class="nav-item">Apps</span>
+            </a></li>
+            <li><a href="./movies.html">
+                <i class="fas fa-solid fa-film"></i>
+                <span class="nav-item">Movies</span>
+            </a></li>
+            <li><a href="./chat.html">
+                <i class="fas fa-solid fa-message"></i>
+                <span class="nav-item">Chat</span>
+            </a></li>
+            <li><a href="./settings.html" class="settings">
+                <i class="fas fa-solid fa-gear"></i>
+                <span class="nav-item">Settings</span>
+            </a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="centerr">
+          <div class="setting-option">
+            <div class="col">
+              <h1>Disguise Site</h1>
+              <p>Hide The Website To Look Like Google Classroom. And Quick Switch To Google Classroom</p>
+              <p>With The ` or ~ Key Which Is Located In The Top Left Hand Side Of Keyboard</p>
+              <p>Does Not Work When Watching TV or Playing Games</p>
+            </div>
+            <div class="dropdown-container">
+              <select id="option1" name="option1">
+                <option value="Off">Turn Off</option>
+                <option value="On">Turn On</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="setting-option">
+            <div class="col">
+              <h1>View Site Credits</h1>
+              <p>With all of the work and images put in this website please visit this page for info</p>
+              <p>about that including our images/links and more</p>
+            </div>
+            <div class="dropdown-container">
+              <a href="./dear.html" style="color: #7289DA;padding: 20px;background: #202225;width: 100px;border-radius: 5px;">Click Here</a>
+            </div>
+          </div>
+        </div>
+    </main>   
+    <script>
+        function getCookie(cname) {
+            return localStorage.getItem(cname);
+        }
+        const option = getCookie("Dis");
+        console.log(option)
+        if (option == "Off") {
+            document.getElementById("option1").value = "Off";
+        } else {
+            document.getElementById("option1").value = "On";
+        }
+        document.getElementById("option1").onchange = (event) => {
+            event.preventDefault();
+            localStorage.setItem('Dis', document.getElementById("option1").value);
+            location.reload()
+        };
+    </script>
+    <script src="../scripts/smart.js"></script>
+</body>
+</html>

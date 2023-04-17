@@ -1,0 +1,583 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: url('../assets/stars.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    background: #fff;
+    width: 90px;
+    overflow: hidden;
+    transition: width 0.2s linear;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+    z-index: 9;
+}
+
+.logo {
+    text-align: center;
+    display: flex;
+    transition: all 0.5s ease;
+    margin: 10px 0 0 10px;
+}
+
+.logo img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+.logo span {
+    font-weight: bold;
+    padding-left: 15px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+a {
+    position: relative;
+    color: rgb(85, 83, 83);
+    font-size: 14px;
+    display: table;
+    width: 300px;
+    padding: 10px;
+}
+
+.fas {
+    position: relative;
+    width: 70px;
+    height: 40px;
+    top: 14px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.nav-item {
+    position: relative;
+    top: 12px;
+    margin-left: 10px;
+}
+
+.nav a:hover {
+    background: #eee;
+}
+
+nav:hover {
+    width: 280px;
+    transition: all 0.5s ease;
+}
+
+.settings {
+    position: absolute;
+    bottom: 0;
+}
+
+main {
+    position: relative;
+    margin-left: 90px; /* Set the margin to match the width of the sidebar */
+    padding: 20px;
+    background: url("../assets/stars.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 6;
+    width: 80%;
+    text-align: center;
+    color: #fff;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+  }
+
+  
+  
+  .title h4 {
+    font-size: 1.1rem;
+    line-height: 3rem;
+    margin: 0;
+  }
+
+/*Proxy*/
+.search-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #2C2F33;
+    height: 300px;
+    width: 450px;
+    border-radius: 10px;
+  }
+
+.search-container h1 {
+    color: #8e44ad;
+}
+
+.search {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+}
+  
+  .search-container input[type=text] {
+    padding: 10px;
+    border: 2px solid #8e44ad;
+    font-size: 16px;
+    background-color: transparent;
+    color: #fff;
+    width: 250px;
+  }
+  
+  .search-container input[type=text]:focus {
+    outline: none;
+  }
+  
+  .search-container button {
+    background-color: #8e44ad;
+    border: 2px solid #8e44ad;
+    color: #fff;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  
+  .search-container button:hover {
+    background-color: #6c3483;
+    border: 2px solid #6c3483;
+  }
+  
+  .search-container input[type=text]::placeholder {
+    color: #bdc3c7;
+  }
+    
+  /* Responsive */
+  @media screen and (max-width: 600px) {
+    .search-container {
+      flex-direction: column;
+      position: relative;
+    }
+    .search-container input[type=text] {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    .search-container button {
+      border-top-right-radius: 0;
+      border-bottom-left-radius: 10px;
+    }
+    /* Notched Corner */
+    .search-container button {
+      clip-path: none;
+    }
+  }
+  
+  
+  
+/*Games*/
+
+section {
+    position: relative;
+    margin-left: 90px; /* Set the margin to match the width of the sidebar */
+    background: url('../assets/stars.webp');
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    overflow-x: hidden;
+  }
+  
+  .flexer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 15px;
+  }
+  
+  .box {
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+    margin-left: 18px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 210px;
+    margin: 10px;
+    text-align: center;
+    color: #eee;
+    text-decoration: none;
+    background: #2C2F33;
+    border-radius: 5px;
+    transition: 0.3s all ease-in;
+  }
+
+  .box:hover {
+    transform: scale(1.05);
+  }
+
+  .box img {
+    height: 162px;
+    width: 162px;
+    border-radius: 5%;
+  }
+  
+  .box a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .box span {
+    margin-top: -5px;
+  }
+  
+
+  section iframe {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('../assets/stars.webp');
+  }
+
+  ::-webkit-scrollbar {
+    width: 7px;
+    padding: 1px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: rgb(85, 83, 83);
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #fff;
+    border-radius: 10px;
+  }
+
+  #loading {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 50%;
+    left: 50%;
+    margin: -50px 0 0 -50px;
+    width: 200px;
+    height: 200px;
+    background: url('../assets/loading-gif.gif') 50% 50% no-repeat transparent;
+    background-size: cover;
+    border-radius: 5px;
+    box-shadow: 0px 0px 0px 5px rgba(0,0,0,0.1);
+  }
+
+  /*Movies*/
+
+  .contenter {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+  }
+  .half {
+    height: 100%;
+    width: 50%;
+    position: relative;
+  }
+  .half:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  .anime {
+    transition: 0.4s all ease-in;
+    background: url(../assets/still-anime.PNG);
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .live-action {
+    transition: 0.4s all ease-in;
+    background: url(../assets/still-live.PNG);
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .anime:hover {
+    background: url('../assets/anime.gif');
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    display: flex;
+  }
+  .live-action:hover {
+    background: url('../assets/avengers.gif');
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    display: flex;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  @media only screen and (max-width: 767px) {
+    .contenter {
+      flex-direction: column;
+    }
+    .half {
+      width: 100%;
+      height: 50%;
+    }
+  }
+
+  #frame {
+    position: relative;
+    margin-left: 90px; /* Set the margin to match the width of the sidebar */
+    background: url('../assets/stars.webp');
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 93.39%;
+    overflow-x: hidden;
+  }
+
+  #ifr {
+    width: 93.39%;
+    height: 100vh;
+  }
+
+
+  /*Chat*/
+
+  .chat {
+    width: 100%;
+    height: 100%;
+    margin-top: 15px;
+}
+
+.members-count,
+.members-list,
+.messages {
+  border: 1px solid #e4e4e4;
+  padding: 15px;
+  margin-bottom: 15px;
+  font-size: 25px;
+  color: #8e44ad;
+}
+
+.members-list {
+    height: 80px;
+    overflow: auto;
+}
+
+.messages {
+  flex-shrink: 1;
+  overflow: auto;
+  height: 260px;
+}
+
+.message {
+  padding: 5px 0;
+}
+.message .member {
+  display: inline-block;
+}
+
+.member {
+  padding-right: 10px;
+  position: relative;
+}
+
+.message-form {
+  display: flex;
+  flex-shrink: 0;
+}
+.message-form__input {
+  flex-grow: 1;
+  border: 1px solid #dfdfdf;
+  padding: 10px 15px;
+  font-size: 16px;
+  background: transparent;
+  color: #e4e4e4;
+  outline: none;
+}
+.message-form__button {
+  margin-left: 10px;
+  height: 40px;
+  width: 100px;
+  border: 1px solid #fff;;
+  color: #e4e4e4;
+  font-size: 15px;
+  background: transparent;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+/*Settings*/
+
+/* Set width of .centerr to 80% */
+.centerr {
+  width: 80%;
+  margin: 0 auto;
+  
+}
+
+/* Center the select input */
+.dropdown-container select {
+  display: block;
+  margin: 0 auto;
+  width: 100px;;
+  height: 90px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  color: #7289DA;
+  background-color: #202225;
+  border: none;
+  border-radius: 5px;
+  appearance: none;
+}
+
+/* Style the dropdown */
+.dropdown-container select:focus {
+  outline: none;
+}
+
+/* Style the dropdown options */
+.dropdown-container option {
+  padding: 10px;
+  width: 100%;
+  background-color: #36393F;
+  color: #B9BBBE;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+/* Style the setting-option container */
+.setting-option {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #2F3136;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+/* Style the col container */
+.col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: calc(100% - 130px);
+  padding-right: 10px;
+  line-height: 90%;
+}
+
+/* Style the h1 and p tags */
+.setting-option h1, p {
+  margin: 0;
+  color: #B9BBBE;
+}
+
+.setting-option h1 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.setting-option p {
+  font-size: 14px;
+  font-weight: normal;
+  margin-top: 5px;
+}
+
+.iframe-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.iframe-wrapper .overyay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.iframe-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 4;
+}
+
+
+
+

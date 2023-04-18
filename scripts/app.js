@@ -1,7 +1,7 @@
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const game = urlParams.get('iframe')
-const baseurl = "https://stellernet-media-production.up.railway.app/";
+const baseurl = "https://steller-production.up.railway.app/";
 const fullurl = baseurl + game;
 function showLoading() {
     document.getElementById('loading').style.display = 'block';

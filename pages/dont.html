@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dont Fuck With My Site</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            height: 100%;
+            width: 100%;
+        }
+
+        body {
+            height: 100%;
+            width: 100%;
+            background: url(./stars.webp);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .center {
+            height: 100%;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #8e44ad;
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <div class="center">
+        <h1>@Nakia Girvan Dont Fuck With My Site</h1>
+        <h2>You Like Watching That Shit?</h2>
+        <h2 id="ip">I Like Your Public IP: </h2>
+    </div>
+    <script>
+        function getIP(json) {
+            document.getElementById("ip").innerText = `I Like Your Public IP: ${json.ip}`;
+        }
+    </script>
+    <script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
+</body>
+</html>

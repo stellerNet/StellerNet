@@ -2,6 +2,8 @@ function getCookie(cname) {
     return localStorage.getItem(cname);;
 }
 
+var node = document.querySelector('[title="GDPR-compliant Web Analytics"]').style.display = "none";
+
 if (getCookie("Dis") == "On") {
     // Change page title
     document.title = "Classes";

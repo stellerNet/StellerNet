@@ -61,7 +61,6 @@ window.addEventListener('keydown', function(event) {
   }
 });
 
-alert("Pretty Nice Site Right Even");
 
 
 
